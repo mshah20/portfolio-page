@@ -1,0 +1,45 @@
+.background-video-container {
+  height: 100vh;
+  width: 100%;
+}
+
+.background-video {
+  height: 100%;
+  width: 100%;
+  position: fixed;
+}
+
+.welcome-text-container {
+  position: absolute;
+  left: 25px;
+  top: 50%;
+  transform: translateY(-50%);
+
+  font-size: 2rem;
+  line-height: 175%;
+}
+
+.welcome-text-highlight {
+  color: var(--yellow);
+}
+
+.projects-container {
+  height: 100vh;
+}
+
+@media only screen and (max-width: 430px) {
+  .background-video-container {
+    height: 100vh;
+    width: 100vw;
+  }
+  
+  .background-video {
+    height: 100vh;
+    width: 100vw;
+    object-fit: cover;
+  }
+
+  .welcome-text-highlight {
+    color: var(--orange);
+  }
+}

@@ -1,0 +1,191 @@
+@keyframes fadeIn {
+  0% { opacity: 0% }
+  100% { opacity: 100% }
+}
+
+@keyframes fadeOut {
+  100% { opacity: 0% }
+  0% { opacity: 100% }
+}
+
+#projects-screen {
+  position: relative;
+}
+
+.projects-container {
+  position: absolute;
+
+  height: 60%;
+  width: 85%;
+
+  display: flex;
+  justify-content: space-between;
+}
+
+.project-window {
+  position: relative;
+  width: 16%;
+  z-index: 0;
+  font-size: 0.7rem;
+  transition: ease-in-out 1s;
+}
+
+.project-window:hover {
+  width: 200%;
+  transform: scale(1.2);
+  background-repeat: no-repeat;
+  z-index: 1;
+  border: 1px solid var(--orange);
+}
+
+.project-window:hover > .project-image {
+  filter: brightness(100%);
+  transition: ease-in-out 1s;
+}
+
+.project-window:hover > .project-title {
+  animation: fadeOut 1s forwards;
+}
+
+.project-window:hover > .project-skills-container,
+.project-window:hover > .github-container,
+.project-window:hover > .visit-container
+ {
+  animation: fadeIn 1s forwards;
+}
+
+.project-image {
+  height: 100%;
+  width: 100%;
+
+  background-position: 50%;
+  background-size: cover;
+  filter: brightness(50%);
+}
+
+.project-title {
+  position: absolute;
+  bottom: 25px;
+  width: 100%;
+  min-width: 100%;
+  padding: 10px 0;
+  font-size: 0.9rem;
+  text-align: center;
+  background-color: var(--orange);
+  animation: fadeIn 1s;
+}
+
+.visit-container {
+  position: absolute;
+  bottom: 75px;
+  opacity: 0;
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  height: 25px;
+  min-width: 25px;
+  padding: 1px;
+
+  background-color: var(--blackTransparent);  
+}
+
+.visit-container:hover .icon-text-container {
+  width: 300%;
+}
+
+.visit-icon {
+  font-size: 20px;
+}
+
+.github-container {
+  position: absolute;
+  bottom: 40px;
+  height: 25px;
+  padding: 1px;
+  opacity: 0;
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: center; 
+
+  background-color: var(--blackTransparent);  
+}
+
+.github-icon {
+  height: 25px;
+  width: 25px;
+  fill: white;
+}
+
+.github-container:hover .icon-text-container {
+  width: 325%;
+}
+
+.icon-text-container {
+  position: absolute;
+  bottom: 0;
+  left: 100%;
+  right: 0;
+  background-color: var(--blackTransparent);
+  overflow: hidden;
+  width: 0;
+  height: 100%;
+  transition: .5s ease;
+}
+
+.icon-text {
+  padding-right: 4px;
+  position: absolute;
+  white-space: nowrap;
+}
+
+.project-skills-container {
+  position: absolute;
+  bottom: 5px;
+  height: 25px;
+  padding: 1px;
+  opacity: 0;
+  display: flex;
+  align-items: center;
+  background-color: var(--blackTransparent);  
+}
+
+.project-skills {
+  padding: 3px 5px;
+}
+
+@media only screen and (max-width: 430px) {
+  #projects-screen {
+    height: 1600px;
+  }
+
+  .projects-container {
+    height: 1375px;
+    flex-direction: column;
+  }
+
+  .project-window {
+    height: 100%;
+    width: 100%;
+    margin: 30px 0;
+  }
+
+  .project-window:hover {
+    width: 100%;
+    transform: scale(1);
+  }
+
+  .project-image {
+    filter: brightness(100%);
+  }
+
+  .project-title {
+    bottom: -25px;
+    padding: 6px 0;
+    font-size: 0.8rem;
+  }
+}

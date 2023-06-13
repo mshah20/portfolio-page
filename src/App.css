@@ -1,38 +1,101 @@
-.App {
-  text-align: center;
+:root {
+  --blue: #07e8ff;
+  --orange: #ff5e18;
+  --darkOrange: #ce4f18;
+  --yellow: #fff317;
+  --blackTransparent: rgba(0, 0, 0, 0.5);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+* {
+  margin: 0;
+  padding: 0;
+  color: white;
+  scroll-behavior: smooth;
+  font-family: 'Oxygen', 'Courier', 'Arial';
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.background-video-container {
+  height: 100vh;
+  margin: 0;
+  display: block;
+  position: relative;
+  z-index: 0;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.background-video {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  object-fit: cover;
+}
+
+.section {
+  height: 100vh;
+  width: 100%;
+}
+
+.centered {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@keyframes bounceArrowUp {
+  50% { transform: rotate(180deg) translateY(5px); }
+}
+
+.arrow-up,
+.arrow-down {
+  transition: ease-in-out 0.2s;
+}
+
+.arrow-up:hover,
+.arrow-down:hover {
+  cursor: pointer;
+}
+
+.arrow-up {
+  transform: rotate(180deg);
+}
+
+.arrow-up:hover {
+  animation: bounceArrowUp 1.25s;
+  animation-iteration-count: infinite; 
+}
+
+@keyframes bounceArrowDown {
+  50% { transform: translateY(5px); }
+}
+
+.arrow-down:hover {
+  animation: bounceArrowDown 1.25s;
+  animation-iteration-count: infinite;
+}
+
+.arrow-text-top-container {
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+}
+
+.arrow-text-bottom-container {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.arrow-text {
+  background-color: var(--blackTransparent);
+  padding: 3px 10px;
+  font-size: 1.1rem;
 }

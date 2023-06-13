@@ -1,0 +1,55 @@
+.contact-container {
+  position: fixed;
+  top: 50px;
+  right: 75px;
+  z-index: 2;
+  font-size: 1.1rem;
+  background-color: var(--blackTransparent);
+}
+
+.contact-container:hover .contact-menu {
+  top: 100%;
+  height: 150%;
+}
+
+.contact-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background-color: var(--blackTransparent);
+  overflow: hidden;
+  width: 100%;
+  height: 0;
+  transition: .5s ease;
+}
+
+.visit-github,
+.email {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+}
+
+.contact-button {
+  padding: 6px 10px;
+  border: 2px solid white;
+  user-select: none;
+}
+
+.visit-github-container,
+.email-container {
+  cursor: pointer;
+  margin: 3px 0px 3px 5px;
+}
+
+.visit-github-container p,
+.email-container p {
+  margin: auto;
+}
+
+@media only screen and (max-width: 430px) {
+  .contact-container {
+    display: none;
+  }
+}
