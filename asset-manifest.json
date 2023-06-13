@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/portfolio-page/static/css/main.9ecbe605.css",
+    "main.js": "/portfolio-page/static/js/main.e2b07c5c.js",
+    "static/media/profile-picture.png": "/portfolio-page/static/media/profile-picture.b9538b9e3e16b9107b1e.png",
+    "static/media/hexagonBackgroundVideo.mp4": "/portfolio-page/static/media/hexagonBackgroundVideo.76aae29e790dd88c27dc.mp4",
+    "static/media/jeopardy-questions.png": "/portfolio-page/static/media/jeopardy-questions.c128e6171b30814ce17d.png",
+    "static/media/weather-search.png": "/portfolio-page/static/media/weather-search.96376927c6202905667d.png",
+    "static/media/animal-crossing-collection.png": "/portfolio-page/static/media/animal-crossing-collection.0f44ac779b7e9869b50f.png",
+    "static/media/portfolio-example.png": "/portfolio-page/static/media/portfolio-example.23ad813ad94fafc6483d.png",
+    "static/media/product-landing-page.png": "/portfolio-page/static/media/product-landing-page.e91dc303cbb30492df35.png",
+    "static/media/finance-app.png": "/portfolio-page/static/media/finance-app.74078b1d8f9ac9d26fd5.png",
+    "index.html": "/portfolio-page/index.html",
+    "main.9ecbe605.css.map": "/portfolio-page/static/css/main.9ecbe605.css.map",
+    "main.e2b07c5c.js.map": "/portfolio-page/static/js/main.e2b07c5c.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.9ecbe605.css",
+    "static/js/main.e2b07c5c.js"
+  ]
+}
